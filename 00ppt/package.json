@@ -1,0 +1,19 @@
+{
+  "name": "ollama-ppt-agent-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "使用本地 Ollama 生成三页 PPT，并通过本地 HTTP 服务提供下载。",
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate-demo.js",
+    "start": "node src/server.js",
+    "check": "node --check src/server.js && node --check src/graph/ppt-graph.js && node --check src/agent/ppt-agent.js && node --check src/ppt/ppt-renderer.js"
+  },
+  "dependencies": {
+    "@langchain/langgraph": "^1.4.7",
+    "pptxgenjs": "^4.0.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

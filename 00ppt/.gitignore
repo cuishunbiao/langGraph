@@ -1,5 +1,5 @@
 node_modules/
+output/
+public/files/
 .env
-.env.*
-!.env.example
 .DS_Store
