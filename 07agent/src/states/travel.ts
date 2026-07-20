@@ -3,7 +3,7 @@ import type { BaseMessage } from "@langchain/core/messages"
 import { registry } from "@langchain/langgraph/zod"
 import { MessagesZodMeta } from "@langchain/langgraph"
 
-const travelSchema = z.object({
+export const travelSchema = z.object({
     // 聊天消息
     messages: z
         .array(z.custom<BaseMessage>())
@@ -14,4 +14,3 @@ const travelSchema = z.object({
 })
 
 export type T_travelSchema = z.infer<typeof travelSchema>;
-export default travelSchema;
