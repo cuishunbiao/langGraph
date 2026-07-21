@@ -1,8 +1,6 @@
 import { tool } from "@langchain/core/tools"
 import { z } from "zod/v4"
 import { TICKET_DB } from "../db/ticket.ts"
-import { de } from "zod/locales";
-import { from } from "node:stream/iter";
 
 // 方法参数 schema
 const schema = z.object({

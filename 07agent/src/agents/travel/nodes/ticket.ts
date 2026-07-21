@@ -21,8 +21,8 @@ export async function ticket(state: T_travelSchema) {
   const cities = String(result.content).trim();
   let from_city = "未知";
   let to_city = "未知";
-  if (cities.includes(",")) {
-    const parts = cities.split(","); // 以逗号分隔，"北京,上海" -> ["北京", "上海"]
+  if (/[,，]/.test(cities)) {
+    const parts = cities.split(/[,，]/); // 同时兼容英文逗号和中文逗号
     from_city = parts[0]?.trim() || "未知";
     to_city = parts[1]?.trim() || "未知";
   }
